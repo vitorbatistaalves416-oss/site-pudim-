@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pudim Lucrativo - O Sabor da Infância</title>
+    <meta name="description" content="Pudins artesanais feitos com ingredientes premium. A receita perfeita, sem furinhos, cremoso e irresistível.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#FCE4EC', // Pink 50
+                            DEFAULT: '#F8BBD0', // Pink 100
+                            dark: '#C2185B', // Pink 700
+                            brown: '#5D4037', // Brown 700
+                            gold: '#D4AF37',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-brand-brown">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24 md:h-32 items-center">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="h-24 w-24 md:h-32 md:w-32 rounded-full bg-white overflow-hidden flex items-center justify-center -mt-1 md:-mt-2 shadow-lg border-4 border-pink-50 relative z-10">
+                        <img src="img2/logo-pudim.jpg" alt="Logo Pudim Lucrativo" class="h-full w-full object-cover rounded-full" style="image-rendering: -webkit-optimize-contrast;">
+                    </div>
+                    <span class="font-serif text-xl md:text-2xl font-bold text-brand-dark tracking-wide">Pudim<span class="text-brand-brown">Lucrativo</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#diferenciais" class="text-brand-brown hover:text-brand-dark transition font-medium">Nosso Pudim</a>
+                    <a href="#como-funciona" class="text-brand-brown hover:text-brand-dark transition font-medium">Lucrar?</a>
+                    <a href="#depoimentos" class="text-brand-brown hover:text-brand-dark transition font-medium">Depoimentos</a>
+                    <a href="#faq" class="text-brand-brown hover:text-brand-dark transition font-medium">Dúvidas</a>
+                </div>
+                <div class="hidden md:flex flex-col items-center">
+                    <span class="text-lg font-bold text-brand-dark mb-1">24 receitas por apenas 29,90</span>
+                    <a href="https://wa.me/message/CISBVYT7L4PYD1" class="animate-pulse-shadow-only bg-brand-dark text-white px-6 py-2 rounded-full font-bold hover:bg-pink-700 transition shadow-lg flex items-center gap-2">
+                        <i class="fab fa-whatsapp"></i> Quero Agora!
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-brand-brown hover:text-brand-dark focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-pink-100 pb-4 shadow-xl">
+            <a href="#diferenciais" class="block py-3 px-4 text-brand-brown hover:bg-pink-50 border-b border-pink-50">Por que nós?</a>
+            <a href="#como-funciona" class="block py-3 px-4 text-brand-brown hover:bg-pink-50 border-b border-pink-50">Como Funciona</a>
+            <a href="#depoimentos" class="block py-3 px-4 text-brand-brown hover:bg-pink-50 border-b border-pink-50">Depoimentos</a>
+            
+            <div class="px-4 pt-4">
+                <span class="block text-center text-brand-dark font-bold mb-3">24 receitas por apenas 29,90</span>
+                <a href="https://wa.me/message/CISBVYT7L4PYD1" class="block w-full text-center bg-brand-dark text-white py-3 rounded-full font-bold shadow-lg hover:bg-pink-700 transition">
+                    <i class="fab fa-whatsapp mr-2"></i> Quero Agora!
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-32 pb-12 md:pt-48 md:pb-20 lg:pt-56 lg:pb-32 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div class="text-center lg:text-left fade-in-section">
+                    <!-- Mobile ONLY Call to Action -->
+                    <div class="md:hidden mb-20 flex flex-col items-center animate-bounce-subtle">
+                        <span class="text-xl font-bold text-brand-dark mb-3">24 receitas por apenas R$ 29,90</span>
+                        <a href="https://wa.me/message/CISBVYT7L4PYD1" class="w-full max-w-xs bg-brand-dark text-white py-4 rounded-full font-bold shadow-xl hover:bg-pink-700 transition flex items-center justify-center gap-2 transform hover:scale-105 mb-3">
+                            <i class="fab fa-whatsapp text-2xl"></i> <span class="text-lg">Quero Agora!</span>
+                        </a>
+                        <span class="text-sm font-bold text-brand-brown animate-pulse">🔥 Oferta Imperdível!</span>
+                    </div>
+
+                    <span class="inline-block py-1 px-3 rounded-full bg-brand-dark/10 text-brand-dark font-bold text-sm mb-4 md:mb-6 tracking-wider uppercase">
+                        100% Artesanal &bull; Pudim sem Fogo
+                    </span>
+                    <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-4 md:mb-6">
+                        O Pudim que <br>
+                        <span class="text-brand-dark italic">Derrete na Boca</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-brand-brown/80 mb-6 md:mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
+                        Esqueça tudo o que você sabe sobre sobremesas. Descubra o Segredo do Pudim Sem Fogo, sem furinhos e com a calda perfeita que vai conquistar seus clientes.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 md:gap-8 justify-center lg:justify-start">
+                        <a href="https://wa.me/5500000000000" class="btn-hover animate-pulse-shake bg-brand-dark text-white text-lg px-8 py-4 rounded-full font-bold shadow-xl flex items-center justify-center gap-2">
+                             Aprender Pudim Lucrativo 
+                        </a>
+                        <a href="#oferta-final" class="btn-hover relative bg-white text-brand-brown text-lg px-8 py-4 rounded-full font-bold shadow-[0_0_25px_rgba(136,14,79,0.5)] hover:shadow-[0_0_35px_rgba(136,14,79,0.7)] hover:bg-pink-50 border border-pink-100 flex items-center justify-center transition-all duration-300">
+                            Saber Mais
+                        </a>
+                    </div>
+                    <div class="mt-8 flex items-center justify-center lg:justify-start gap-4 text-sm font-medium text-brand-brown/70">
+                        <div class="flex -space-x-2">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64" alt="User">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64" alt="User">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=64&h=64" alt="User">
+                        </div>
+                        <p>Mais de 900 alunos lucrando</p>
+                    </div>
+                </div>
+                <div class="relative fade-in-section delay-200">
+                    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-72 h-72 bg-brand-light rounded-full blur-3xl opacity-50"></div>
+                    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 bg-yellow-100 rounded-full blur-3xl opacity-50"></div>
+                    <img src="img2/img-princ.png" alt="Pudim Lucrativo com Calda Dourada" class="relative rounded-3xl shadow-2xl animate-float max-w-full h-auto border-4 border-white mx-auto block">
+                    
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-pink-50 flex items-center gap-3 animate-pulse">
+                        <div class="bg-green-100 p-2 rounded-full text-green-600">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase font-bold">Avaliação</p>
+                            <div class="text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentiators Section -->
+    <section id="diferenciais" class="scroll-mt-40 py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-4xl font-bold mb-4 text-brand-brown">Por que nosso pudim é único?</h2><br>
+                <h3 class="text-2xl font-bold mb-6 text-gray-600 font-serif">Aprenda já o Pudim que NÃO vai ao fogo</h3>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Não vendemos apenas receitas, entregamos uma experiência de sabor que te leva de volta aos melhores momentos.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Feature 1 -->
+                <div class="bg-pink-50 rounded-2xl p-8 text-center card-hover border border-pink-100 fade-in-section">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl text-brand-dark mx-auto mb-6 shadow-sm">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 font-serif">Textura Lisa</h3>
+                    <p class="text-gray-600">Nada de furinhos indesejados. Nossa técnica exclusiva garante uma textura cremosa, densa e uniforme .</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-pink-50 rounded-2xl p-8 text-center card-hover border border-pink-100 fade-in-section delay-100">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl text-brand-dark mx-auto mb-6 shadow-sm">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 font-serif"> Campeão em vendas</h3>
+                    <p class="text-gray-600"> Sem forno, sem banho-maria e sem complicação. O pudim que qualquer pessoa consegue fazer e <b>VENDER.</b></p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-pink-50 rounded-2xl p-8 text-center card-hover border border-pink-100 fade-in-section delay-200">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl text-brand-dark mx-auto mb-6 shadow-sm">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 font-serif">Feito com Amor</h3>
+                    <p class="text-gray-600">Um pudim simples, feito com carinho, que reúne familias à mesa e ainda pode trazer dinheiro para o seu bolso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Divider -->
+    <div class="h-auto py-8 bg-brand-brown w-full flex items-center justify-center overflow-hidden relative px-4">
+        <p class="text-brand-light text-xl md:text-2xl font-serif italic opacity-80 text-center leading-relaxed">"A facilidade mora num pedaço de pudim"</p>
+    </div>
+
+    <!-- How it Works -->
+    <section id="como-funciona" class="scroll-mt-40 py-20 bg-brand-light/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-4xl font-bold mb-4 text-brand-brown">Como ter essa delícia na sua mesa? <br><br> Passo a Passo completo em nosso curso 😉.</h2>
+            </div>
+
+            <div class="relative">
+                <!-- Connecting Line (Desktop) -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-brand-brown/10 -translate-y-1/2 z-0"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+                    <!-- Step 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg text-center fade-in-section">
+                        <div class="w-12 h-12 bg-brand-dark text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+                        <h4 class="font-bold text-lg mb-2">Utensílios</h4>
+                        <p class="text-sm text-gray-600">Tudo que você precisa tem em sua casa</p>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg text-center fade-in-section delay-100">
+                        <div class="w-12 h-12 bg-brand-dark text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+                        <h4 class="font-bold text-lg mb-2">Calda Perfeita</h4>
+                        <p class="text-sm text-gray-600">O segredo da calda dourada.</p>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg text-center fade-in-section delay-200">
+                        <div class="w-12 h-12 bg-brand-dark text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+                        <h4 class="font-bold text-lg mb-2">Receita passo a passo</h4>
+                        <p class="text-sm text-gray-600">Mistura cremosa perfeita.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg text-center fade-in-section delay-300">
+                        <div class="w-12 h-12 bg-brand-dark text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
+                        <h4 class="font-bold text-lg mb-2">Ponto do Pudim Lucrativo</h4>
+                        <p class="text-sm text-gray-600">Como saber quando está pronto.</p>
+                    </div>
+                </div>
+            </div>
+
+             <div class="mt-12 text-center fade-in-section">
+                <a href="https://wa.me/5500000000000" class="btn-hover animate-pulse-custom bg-brand-gold text-brand-brown text-xl px-12 py-5 rounded-full font-bold shadow-2xl inline-flex items-center gap-3 transform hover:scale-105 transition duration-300">
+                     Gostaria de Aprender para Vender 
+                </a>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Showcase -->
+    <section class="py-12 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Headers -->
+            <div class="text-center md:text-left mb-8 md:mb-12 fade-in-section">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3 md:mb-4 text-brand-brown">3 RECEITAS MAIS QUERIDINHAS</h2>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-600 font-serif">Perfeitas para fazer em família!</h3>
+            </div>
+
+            <div class="space-y-12 md:space-y-16">
+                <!-- Recipe 1 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center fade-in-section">
+                    <!-- Text (Left) -->
+                    <div class="bg-pink-50 p-6 md:p-8 rounded-2xl border border-pink-100 shadow-sm h-full flex flex-col justify-center">
+                        <div class="flex items-center gap-4 mb-4 md:mb-6">
+                            <i class="fas fa-star text-brand-gold text-2xl md:text-3xl"></i>
+                            <h4 class="text-2xl md:text-3xl font-extrabold text-brand-brown">Sobremesa de Leite Ninho</h4>
+                        </div>
+                        <p class="text-gray-700 text-lg md:text-xl font-medium leading-relaxed">Sobremesa de Leite Ninho cremosa, doce na medida certa e sucesso garantido entre adultos e crianças.</p>
+                    </div>
+                    <!-- Image (Right) -->
+                    <div class="h-64 md:h-[300px] relative overflow-hidden rounded-2xl shadow-md group order-first md:order-last">
+                        <img src="img2/img-recei1.jpg" alt="Foto Receita 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                </div>
+
+                <!-- Recipe 2 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center fade-in-section">
+                    <!-- Text (Left) -->
+                    <div class="bg-pink-50 p-6 md:p-8 rounded-2xl border border-pink-100 shadow-sm h-full flex flex-col justify-center">
+                        <div class="flex items-center gap-4 mb-4 md:mb-6">
+                            <i class="fas fa-crown text-brand-gold text-2xl md:text-3xl"></i>
+                            <h4 class="text-2xl md:text-3xl font-extrabold text-brand-brown">Bolo estilo Confeitaria Famosa</h4>
+                        </div>
+                        <p class="text-gray-700 text-lg md:text-xl font-medium leading-relaxed">Bolo com padrão de confeitaria famosa, perfeito para encomendas, festas e clientes exigentes.</p>
+                    </div>
+                    <!-- Image (Right) -->
+                    <div class="h-64 md:h-[300px] relative overflow-hidden rounded-2xl shadow-md group order-first md:order-last">
+                        <img src="img2/img-recei2.jpg" alt="Foto Receita 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                </div>
+
+                <!-- Recipe 3 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center fade-in-section">
+                    <!-- Text (Left) -->
+                    <div class="bg-pink-50 p-6 md:p-8 rounded-2xl border border-pink-100 shadow-sm h-full flex flex-col justify-center">
+                        <div class="flex items-center gap-4 mb-4 md:mb-6">
+                            <i class="fas fa-heart text-brand-gold text-2xl md:text-3xl"></i>
+                            <h4 class="text-2xl md:text-3xl font-extrabold text-brand-brown">Torta sem Fogo</h4>
+                        </div>
+                        <p class="text-gray-700 text-lg md:text-xl font-medium leading-relaxed">Torta sem fogo cremosa, linda e fácil de preparar. Combinação perfeita de chocolate e morango que conquista no visual e no sabor — ideal para vender e lucrar.</p>
+                    </div>
+                    <!-- Image (Right) -->
+                    <div class="h-64 md:h-[300px] relative overflow-hidden rounded-2xl shadow-md group order-first md:order-last">
+                        <img src="img2/img-recei3.jpg" alt="Foto Receita 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials (Social Proof) -->
+    <section id="depoimentos" class="scroll-mt-40 py-20 bg-brand-brown text-white relative overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 left-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-brand-dark opacity-20 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-4xl font-bold mb-4 text-white">O Que Nossos Clientes Dizem</h2>
+                <div class="w-24 h-1 bg-brand-gold mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/10 fade-in-section">
+                    <div class="flex text-brand-gold mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="mb-6 italic text-gray-200">"Simplesmente o melhor pudim que já comi na vida. Não tem cheiro de ovo, a textura é incrível. Encomendei para o almoço de domingo e não sobrou nada!"</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&h=100" alt="Ana P." class="w-12 h-12 rounded-full border-2 border-brand-gold">
+                        <div>
+                            <h5 class="font-bold">Ana Paula, 42 anos</h5>
+                            <span class="text-xs text-gray-300">Cliente Recorrente</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/10 fade-in-section delay-100">
+                    <div class="flex text-brand-gold mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="mb-6 italic text-gray-200">"Depois dos 50 a gente acha que não aprende mais nada. Me enganei. O curso é simples, explicado com calma. Hoje vendo pudim toda semana e me sinto muito orgulhoso. Muito grato 🙏"</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&h=100" alt="Carlos M." class="w-12 h-12 rounded-full border-2 border-brand-gold">
+                        <div>
+                            <h5 class="font-bold">Carlos Mendes, 38 anos</h5>
+                            <span class="text-xs text-gray-300">Comprou para Presente</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/10 fade-in-section delay-200">
+                    <div class="flex text-brand-gold mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="mb-6 italic text-gray-200">"Nunca pensei que um pudim pudesse me ajudar tanto. Comecei fazendo para a família, depois vieram os pedidos. Hoje faço toda semana e já virou uma renda extra que ajuda muito em casa."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&h=100" alt="Juliana S." class="w-12 h-12 rounded-full border-2 border-brand-gold">
+                        <div>
+                            <h5 class="font-bold">Juliana Silva, 49 anos</h5>
+                            <span class="text-xs text-gray-300">Amante de Doces</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="scroll-mt-40 py-20 bg-brand-light/20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-4xl font-bold mb-4 text-brand-brown">Dúvidas Frequentes</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Question 1 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden fade-in-section">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-brand-brown flex justify-between items-center focus:outline-none hover:bg-pink-50 transition">
+                        <span>O curso tem quantas receitas?</span>
+                        <i class="fas fa-chevron-down faq-icon transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content bg-gray-50 px-6">
+                        <p class="py-4 text-gray-600">São 24 Receitas.<br> Aulas ministradas pelas confeiteiras da Chef Sandra Souza.</p>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden fade-in-section">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-brand-brown flex justify-between items-center focus:outline-none hover:bg-pink-50 transition">
+                        <span>Qual valor do curso?</span>
+                        <i class="fas fa-chevron-down faq-icon transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content bg-gray-50 px-6">
+                        <p class="py-4 text-gray-600">Por Apenas R$ 29,90. <br> Preço exclusivo de Black Friday.</p>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden fade-in-section">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-bold text-brand-brown flex justify-between items-center focus:outline-none hover:bg-pink-50 transition">
+                        <span>Tenho acesso ao curso por quanto tempo?</span>
+                        <i class="fas fa-chevron-down faq-icon transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content bg-gray-50 px-6">
+                        <p class="py-4 text-gray-600">O Acesso é Vitalício <br><br> " É só R$ 29,90 e é pra sempre… não tem erro. "</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="oferta-final" class="scroll-mt-40 py-20 bg-brand-dark text-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-4xl lg:text-5xl font-bold mb-6 font-serif">Não deixe para amanhã o pudim que você pode comer hoje !</h2><br><br>
+            <h3 class="text-2xl lg:text-3xl font-bold mb-10 text-pink-100 font-serif">Tenha acesso as 24 incríveis receitas <br>+ Bônus Tabela de precificação</h3>
+            <div class="flex justify-center">
+                <a href="https://wa.me/5500000000000" class="btn-hover animate-pulse-shake bg-brand-gold text-brand-brown text-xl px-12 py-5 rounded-full font-bold shadow-2xl inline-flex items-center gap-3 transform hover:scale-105 transition duration-300">
+                    GARANTIR ACESSO AGORA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-brown text-pink-100 py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="h-12 w-12 rounded-full bg-white overflow-hidden flex items-center justify-center">
+                        <img src="img2/logo-pudim.jpg" alt="Logo Pudim Lucrativo" class="h-full w-full object-cover rounded-full" style="image-rendering: -webkit-optimize-contrast;">
+                    </div>
+                        <span class="font-serif text-2xl font-bold text-white tracking-wide">Pudim Lucrativo</span>
+                    </div>
+                    <p class="text-sm opacity-70">A arte de fazer pudim com amor, técnica e os melhores ingredientes.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-sm opacity-70">
+                        <li><a href="#diferenciais" class="hover:text-white transition">Sobre</a></li>
+                        <li><a href="#como-funciona" class="hover:text-white transition">Cardápio</a></li>
+                        <li><a href="#depoimentos" class="hover:text-white transition">Depoimentos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Contato</h4>
+                    <ul class="space-y-2 text-sm opacity-70">
+                        <li class="flex items-center gap-2"><i class="fab fa-whatsapp"></i> (17) 99601-5845</li>
+                        <li class="flex items-center gap-2"><i class="fab fa-instagram"></i> @sandrasouza_chef</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-envelope"></i>sandrasouza.chef@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center pt-8 border-t border-white/10 text-xs opacity-50">
+                &copy; 2025 Pudim Lucrativo. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>

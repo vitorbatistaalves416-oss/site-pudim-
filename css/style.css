@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+    --color-primary: #5D4037;
+    --color-secondary: #FCE4EC;
+    --color-accent: #C2185B;
+    --color-gold: #D4AF37;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-gradient {
+    background: linear-gradient(135deg, #FFF0F5 0%, #F8BBD0 100%);
+}
+
+.text-gold {
+    color: var(--color-gold);
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Button Hover Effect */
+.btn-hover {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(93, 64, 55, 0.2);
+}
+
+.btn-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(93, 64, 55, 0.3);
+}
+
+/* Card Hover Effects */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+}
+
+/* Floating Animation for Hero Image */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Pulse Animation for CTA Button */
+@keyframes pulse-custom {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(194, 24, 91, 0.7);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(194, 24, 91, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(194, 24, 91, 0);
+    }
+}
+
+.animate-pulse-custom {
+    animation: pulse-custom 2s infinite;
+}
+
+/* Pulse Animation (Shadow Only - No Scale) */
+@keyframes pulse-shadow-only {
+    0% {
+        box-shadow: 0 0 0 0 rgba(194, 24, 91, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(194, 24, 91, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(194, 24, 91, 0);
+    }
+}
+
+.animate-pulse-shadow-only {
+    animation: pulse-shadow-only 2s infinite;
+}
+
+/* Combined Pulse and Shake Animation */
+@keyframes pulse-shake {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(194, 24, 91, 0.7);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(194, 24, 91, 0);
+    }
+    55% { transform: scale(1.05) rotate(-3deg); }
+    60% { transform: scale(1.05) rotate(3deg); }
+    65% { transform: scale(1.05) rotate(-3deg); }
+    70% { transform: scale(1.05) rotate(3deg); }
+    75% { transform: scale(1.05) rotate(0); }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(194, 24, 91, 0);
+    }
+}
+
+.animate-pulse-shake {
+    animation: pulse-shake 2.5s infinite;
+}
+
+/* Subtle Bounce for Mobile CTA */
+@keyframes bounce-subtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.animate-bounce-subtle {
+    animation: bounce-subtle 2s infinite ease-in-out;
+}
+
+/* Fade In Animation classes (to be triggered by JS) */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* FAQ Accordion Transitions */
+.faq-content {
+    transition: max-height 0.3s ease-out;
+    max-height: 0;
+    overflow: hidden;
+}
